@@ -1,0 +1,84 @@
+html,body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(169, 154, 154);
+
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    width: 220px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.box{
+    background-color: rgb(15, 15, 16);
+    width: 220px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+ .container h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+    z-index: 3;
+    transition: color 1s ease;
+}
+
+.box.box1{
+    position: absolute;
+    transform-origin: z-index;
+    transition-duration: 1s; 
+    z-index: 2;
+}
+
+.conatiner:hover.box.box1{
+    z-index: 0;
+}
+.container:hover .box.box2{
+    z-index: 2;
+    background-color: white;
+    animation-name: mohit;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    /* animation-direction: reverse; */
+
+    animation-fill-mode: reverse;
+}
+.container:hover h1{
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    background-color: transparent;
+}
+
+
+.container .box.box2{
+  
+    z-index: 1;
+}
+
+@keyframes mohit {
+    from { transform: translateX(-220px); }
+    to   { transform: translateX(0px); }
+
+    /* from{ 
+        width: 0px;
+    }
+    to{
+        width:220px;
+    } */
+  
+    
+}
